@@ -3,11 +3,11 @@
 import logger from '../utils/logger.js';
 import JsonStore from './json-store.js';
 
-const appStore = {
+const empStore = {
 
-  store: new JsonStore('./models/app-store.json', { info: {} }),
-  collection: 'info',
-  array: 'creators',
+  store: new JsonStore('./models/emp-store.json', { employee: {} }),
+  collection: 'employee',
+
 
   getAppInfo() {
     return this.store.findAll(this.collection);
@@ -15,5 +15,4 @@ const appStore = {
 
 };
 
-export default appStore;
-
+export default empStore;
