@@ -1,10 +1,11 @@
 'use strict';
 
 
-import { create } from 'express-handlebars';
+
 import express from 'express';
 import routes from './routes.js';
 import logger from "./utils/logger.js";
+import { create } from 'express-handlebars';
 
 
 const app = express();
