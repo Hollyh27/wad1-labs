@@ -8,6 +8,7 @@
     <h3 class="ui message">
       Start adding your playlists!
     </h3>
+<p>Total Songs: {{songs.length}}</p>
   {{/unless}}
 
   {{#each playlists}}
@@ -16,7 +17,14 @@
       <h3 class="ui header">
         {{title}}
       </h3>
-   <a href="/playlist/{{id}}"> View </a>
+
+      {{#if songs}}
+  <p>Total Songs: {{songs.length}}</p>
+
+   <a href="/playlist/{{id}}"> <i class="open folder black outline icon"></i> </a>
+   {{else}}
+   <p>Empty Playlist!</p>
+   {{/if}}
     </section>
   {{/each}}
 
